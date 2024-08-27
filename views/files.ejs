@@ -1,0 +1,20 @@
+<!-- views/files.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File List</title>
+</head>
+<body>
+  <h1>Files</h1>
+  <ul>
+    <% files.forEach(file => { %>
+      <li>
+        <a href="/files/<%= file.id %>"><%= file.filename %></a>
+        <a href="/files/<%= file.id %>/download">Download</a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/upload">Upload a new file</a>
+</body>
+</html>
